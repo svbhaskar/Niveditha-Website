@@ -194,7 +194,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
+  min-height: 300px;
 }
 
 .hero-header {
@@ -202,6 +204,7 @@ body {
   align-items: center;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -464,27 +467,34 @@ ul {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    padding: 50px 20px;
-    min-height: 400px;
+    padding: 60px 20px;
+    min-height: 450px;
   }
 
   .hero-content {
-    padding: 25px 15px 0 15px;
+    padding: 30px 15px 0 15px;
+    gap: 25px;
   }
 
   .hero-header {
     flex-direction: column;
     gap: 25px;
+    align-items: center;
   }
 
   .logo {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
+    width: 90px;
+    height: 90px;
+    padding: 8px;
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1.0rem;
     text-align: center;
   }
 
@@ -532,32 +542,36 @@ ul {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 40px 15px;
-    min-height: 350px;
+    padding: 60px 15px;
+    min-height: 450px;
   }
 
   .hero-content {
-    padding: 20px 10px 0 10px;
+    padding: 30px 10px 0 10px;
+    gap: 30px;
   }
 
   .hero-header {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
   }
 
   .logo {
-    width: 80px;
-    height: 80px;
-    padding: 8px;
+    width: 70px;
+    height: 70px;
+    padding: 6px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
+    line-height: 1.2;
   }
 
   .hero p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    text-align: center;
   }
 
   .content-section h2 {
