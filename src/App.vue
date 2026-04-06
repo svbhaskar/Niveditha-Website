@@ -489,9 +489,9 @@ ul {
   }
 
   .logo {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
+    width: 125px;
+    height: 125px;
+    padding: 12px;
   }
 
   .title-container {
@@ -566,9 +566,9 @@ ul {
   }
 
   .logo {
-    width: 80px;
-    height: 80px;
-    padding: 8px;
+    width: 110px;
+    height: 110px;
+    padding: 10px;
   }
 
   .title-container {
