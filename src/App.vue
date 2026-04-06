@@ -4,11 +4,13 @@
     <section class="hero">
       <img :src="heroImg" alt="Hero" class="hero-img" />
       <div class="hero-content">
-        <div class="hero-header">
+        <div class="logo-container">
           <img :src="logoImg" alt="College Logo" class="logo" />
-          <h1>{{ college.name }}</h1>
         </div>
-        <p>{{ college.tagline }}</p>
+        <div class="title-container">
+          <h1>{{ college.name }}</h1>
+          <p>{{ college.tagline }}</p>
+        </div>
       </div>
     </section>
 
@@ -195,16 +197,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   min-height: 300px;
 }
 
-.hero-header {
+.logo-container {
   display: flex;
-  align-items: center;
-  gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -216,6 +217,13 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
   flex-shrink: 0;
+}
+
+.title-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .hero h1 {
@@ -476,25 +484,27 @@ ul {
     gap: 25px;
   }
 
-  .hero-header {
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
+  .logo-container {
+    margin-bottom: 5px;
   }
 
   .logo {
-    width: 90px;
-    height: 90px;
-    padding: 8px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .title-container {
+    gap: 12px;
   }
 
   .hero h1 {
-    font-size: 2.0rem;
+    font-size: 2.2rem;
     text-align: center;
   }
 
   .hero p {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     text-align: center;
   }
 
@@ -548,29 +558,31 @@ ul {
 
   .hero-content {
     padding: 30px 10px 0 10px;
-    gap: 30px;
+    gap: 25px;
   }
 
-  .hero-header {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+  .logo-container {
+    margin-bottom: 5px;
   }
 
   .logo {
-    width: 70px;
-    height: 70px;
-    padding: 6px;
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+  }
+
+  .title-container {
+    gap: 10px;
   }
 
   .hero h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: center;
     line-height: 1.2;
   }
 
   .hero p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-align: center;
   }
 
