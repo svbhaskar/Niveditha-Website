@@ -31,7 +31,18 @@
           <div class="info-grid">
             <div class="info-block">
               <h3>📍 Location</h3>
-              <p>{{ location }}</p>
+              <div class="map-container">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.2796135012763!2d78.04818122490137!3d13.395005055454504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb20458f6583c33%3A0x7e51d892d07a6ff7!2sNiveditha%20College%20Of%20Pharmacy%2C%20Gandhi%20Nagar%2C%20Chintamani%2C%20Karnataka%20563125!5e0!3m2!1sen!2sin!4v1775541260389!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="300" 
+                  style="border:0; border-radius: 8px;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Niveditha College of Pharmacy Location">
+                </iframe>
+              </div>
             </div>
             <div class="info-block">
               <h3>🏢 Management</h3>
@@ -121,8 +132,6 @@ const college = ref({
   staffNote: 'The college is supported by well qualified and experienced staff.'
 })
 
-const location = ref('Chintamani is a taluk headquarters having a population around 1 lakh and is located 70 Kms, away from Bangalore City on Bangalore Cudapa Road.')
-
 const management = ref('Niveditha Education Trust, Chintamani')
 
 const libraryInfo = ref('The College provides a spacious library containing many standard books for the ready reference to the students, in addition to it the library receives a wide range of Journals, Magazines and daily Newspapers with special reference to Pharmacy Course. A few journals have been received from Foreign Countries also.')
@@ -130,8 +139,8 @@ const libraryInfo = ref('The College provides a spacious library containing many
 const activities = ref('Regular Sports, literacy and cultural competitions are conducted to improve the talent of the students and to enhance their self-confidence. The sports meet is held every year and prizes to the winners in all the competitions are awarded in the valedictory function of the college. Pharmacy week once in a year will be celebrated with exhibitions. Medical check-up for the public and seminars, Guest lecturers will be arranged timing the week.')
 
 const contact = ref({
-  phone: '0851-451405',
-  mobile1: '944825026',
+  phone: '08154-451405',
+  mobile1: '9448250126',
   mobile2: '7019156189',
   address: 'Opp. old LIC Office, Gandhinagar Extn, Bangalore Road, Chintamani - 563 125, Chikballapur Dist, Karnataka'
 })
@@ -374,6 +383,20 @@ body {
   font-size: 1.1rem;
 }
 
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
 .gallery-section {
   text-align: center;
   padding: 100px 40px;
@@ -600,6 +623,12 @@ ul {
 
   .info-block h3 {
     font-size: 1.2rem;
+  }
+  .map-container iframe {
+    height: 200px;
+  }
+  .map-container iframe {
+    height: 250px;
   }
 
   .contact-item strong {
